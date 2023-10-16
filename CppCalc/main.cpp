@@ -51,10 +51,9 @@ int main()
 	LOGFONT font1 = font;
 	_tcscpy_s(font1.lfFaceName, _T("Î¢ÈíÑÅºÚ"));
 
-	//Button button1(*form, 20, 20, 180, 36, &font1, L"ÃüÌâ¹«Ê½¼ÆËãÆ÷", nullptr, DMCalculator);
-	//Button button2(*form, 20, 20 + 36 + 16, 180, 36, &font1, L"ÓĞÀí¾ØÕó¼ÆËãÆ÷", nullptr, MatrixCalculator);
-	//form->Main();
-	DMCalculator();
+	Button button1(*form, 20, 20, 180, 36, &font1, L"ÃüÌâ¹«Ê½¼ÆËãÆ÷", nullptr, DMCalculator);
+	Button button2(*form, 20, 20 + 36 + 16, 180, 36, &font1, L"ÓĞÀí¾ØÕó¼ÆËãÆ÷", nullptr, MatrixCalculator);
+	form->Main();
 
 	return 0;
 }
