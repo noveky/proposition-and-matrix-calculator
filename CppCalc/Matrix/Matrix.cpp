@@ -1,5 +1,5 @@
 #include "Matrix.h"
-#include "MyString.h"
+#include "../Utilities/StringUtility.h"
 
 int gcd(int a, int b)
 {
@@ -11,7 +11,7 @@ int gcd(int a, int b)
 
 double read(wstring str, int& i, int& decDigits /* 小数位数 */)
 {
-	MyString::trim(str);
+	StringUtility::trim(str);
 	if (str.length() == 0) return 0;
 	double x = 0, f = 1;
 	double t = 0;
@@ -37,7 +37,7 @@ Rational::Rational(double r)
 
 Rational::Rational(wstring str)
 {
-	MyString::trim(str);
+	StringUtility::trim(str);
 	if (str.length() == 0) return;
 	int i = 0;
 	int decDigits_p = 0, decDigits_q = 0; /// 小数位数

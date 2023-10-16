@@ -18,6 +18,41 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GUI\Interface.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Matrix\Matrix.cpp" />
+    <ClCompile Include="Matrix\MatrixCalculator.cpp" />
+    <ClCompile Include="Proposition\Conjunction.cpp" />
+    <ClCompile Include="Proposition\Disjunction.cpp" />
+    <ClCompile Include="Proposition\Function.cpp" />
+    <ClCompile Include="Proposition\Implication.cpp" />
+    <ClCompile Include="Proposition\Nand.cpp" />
+    <ClCompile Include="Proposition\Negation.cpp" />
+    <ClCompile Include="Proposition\Nor.cpp" />
+    <ClCompile Include="Proposition\PropositionCalculator.cpp" />
+    <ClCompile Include="Proposition\TruthTable.cpp" />
+    <ClCompile Include="Proposition\Variable.cpp" />
+    <ClCompile Include="Utilities\StringUtility.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GUI\Interface.h" />
+    <ClInclude Include="Matrix\Matrix.h" />
+    <ClInclude Include="Proposition\Conjunction.h" />
+    <ClInclude Include="Proposition\ConjunctiveNormal.h" />
+    <ClInclude Include="Proposition\ConstantAsFunction.h" />
+    <ClInclude Include="Proposition\Disjunction.h" />
+    <ClInclude Include="Proposition\DisjunctiveNormal.h" />
+    <ClInclude Include="Proposition\Function.h" />
+    <ClInclude Include="Proposition\Implication.h" />
+    <ClInclude Include="Proposition\Nand.h" />
+    <ClInclude Include="Proposition\Negation.h" />
+    <ClInclude Include="Proposition\Nor.h" />
+    <ClInclude Include="Proposition\TruthTable.h" />
+    <ClInclude Include="Proposition\Variable.h" />
+    <ClInclude Include="Proposition\VariableAsFunction.h" />
+    <ClInclude Include="Utilities\StringUtility.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -138,41 +173,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="Conjunction.h" />
-    <ClInclude Include="ConstantAsFunction.h" />
-    <ClInclude Include="DisjunctiveNormal.h" />
-    <ClInclude Include="Implication.h" />
-    <ClInclude Include="Interface.h" />
-    <ClInclude Include="Matrix.h" />
-    <ClInclude Include="MyString.h" />
-    <ClInclude Include="Nand.h" />
-    <ClInclude Include="Nor.h" />
-    <ClInclude Include="TruthTable.h" />
-    <ClInclude Include="Variable.h" />
-    <ClInclude Include="Function.h" />
-    <ClInclude Include="Negation.h" />
-    <ClInclude Include="Disjunction.h" />
-    <ClInclude Include="VariableAsFunction.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Conjunction.cpp" />
-    <ClCompile Include="Disjunction.cpp" />
-    <ClCompile Include="ConjunctiveNormal.h" />
-    <ClCompile Include="DMCalculator.cpp" />
-    <ClCompile Include="Function.cpp" />
-    <ClCompile Include="Implication.cpp" />
-    <ClCompile Include="Interface.cpp" />
-    <ClCompile Include="Matrix.cpp" />
-    <ClCompile Include="MatrixCalculator.cpp" />
-    <ClCompile Include="MyString.cpp" />
-    <ClCompile Include="Nand.cpp" />
-    <ClCompile Include="Negation.cpp" />
-    <ClCompile Include="Nor.cpp" />
-    <ClCompile Include="TruthTable.cpp" />
-    <ClCompile Include="Variable.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

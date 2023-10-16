@@ -12,7 +12,7 @@
 #include "ConstantAsFunction.h"
 #include "Function.h"
 #include "TruthTable.h"
-#include "MyString.h"
+#include "../Utilities/StringUtility.h"
 #include "DisjunctiveNormal.h"
 #include "ConjunctiveNormal.h"
 using namespace std;
@@ -241,15 +241,15 @@ static int getOptPriority(wchar_t symbol, bool input = false)
 shared_ptr<Function> getFunction(wstring fullExpr)
 {
 	/// Split the full expression (e.g. "F = p&~q") into function symbol (e.g. 'F') and expression (e.g. "p&~q")
-	vector<wstring> splitExpr = MyString::split(fullExpr, L'=');
+	vector<wstring> splitExpr = StringUtility::split(fullExpr, L'=');
 	if (splitExpr.size() != 2) throw 0;
 	wstring func = splitExpr[0];
-	MyString::trim(func);
+	StringUtility::trim(func);
 	if (func.length() != 1) throw 0;
 	wchar_t funcSymbol = func[0];
 	if (!(funcSymbol >= L'A' && funcSymbol <= L'Z')) throw 0;
 	wstring expr = splitExpr[1];
-	MyString::trim(expr);
+	StringUtility::trim(expr);
 
 	struct ExprUnit
 	{

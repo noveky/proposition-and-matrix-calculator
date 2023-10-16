@@ -1,5 +1,5 @@
 #include "Interface.h"
-#include "MyString.h"
+#include "../Utilities/StringUtility.h"
 
 namespace Interface
 {
@@ -284,7 +284,7 @@ namespace Interface
 		settextcolor(BLACK);
 		setbkcolor(WHITE);
 		setbkmode(TRANSPARENT);
-		vector<wstring> splitText = MyString::split(text, L'\n');
+		vector<wstring> splitText = StringUtility::split(text, L'\n');
 		for (int i = 0; i < int(splitText.size()); ++i)
 		{
 			outtextxy(left, top + lineHeight * i, splitText[i].c_str()); /// 按行打印文字
@@ -337,8 +337,8 @@ namespace Interface
 			selPosR = max(selStart, curPos);
 			setfillcolor(readOnly ? 0xb1b1b1 : 0xcccccc);
 			setlinestyle(PS_NULL);
-			//vector<wstring> splitText1 = MyString::split(text.substr(0, selPosL), L'\n'); /// 按换行符分隔选中区域左侧之前的文字
-			vector<wstring> splitText2 = MyString::split(text.substr(0, selPosR), L'\n'); /// 按换行符分隔选中区域右侧之前的文字
+			//vector<wstring> splitText1 = StringUtility::split(text.substr(0, selPosL), L'\n'); /// 按换行符分隔选中区域左侧之前的文字
+			vector<wstring> splitText2 = StringUtility::split(text.substr(0, selPosR), L'\n'); /// 按换行符分隔选中区域右侧之前的文字
 			int l = selPosL;
 			for (int i = 0; i < int(splitText2.size()); l -= splitText2[i++].size() + 1)
 			{
@@ -354,7 +354,7 @@ namespace Interface
 		settextcolor(BLACK);
 		setbkcolor(WHITE);
 		setbkmode(TRANSPARENT);
-		vector<wstring> splitText = MyString::split(text, L'\n'); /// 按换行符分隔文字 //TODO 可以动态维护这个东西，不然重复太多次了，但是现在在赶开发进度，这种简洁性优化可有可无了
+		vector<wstring> splitText = StringUtility::split(text, L'\n'); /// 按换行符分隔文字 //TODO 可以动态维护这个东西，不然重复太多次了，但是现在在赶开发进度，这种简洁性优化可有可无了
 		for (int i = 0; i < int(splitText.size()); ++i)
 		{
 			outtextxy(textLeft, textTop + lineHeight * i, splitText[i].c_str()); /// 按行打印文字
@@ -379,7 +379,7 @@ namespace Interface
 			*/
 
 			/// 绘制光标
-			vector<wstring> splitSubText = MyString::split(text.substr(0, curPos), L'\n'); /// 按换行符分隔光标前的文字
+			vector<wstring> splitSubText = StringUtility::split(text.substr(0, curPos), L'\n'); /// 按换行符分隔光标前的文字
 			int cursorLeft = textLeft + textwidth(splitSubText[splitSubText.size() - 1].c_str());
 			int cursorTop = top + 3 + lineHeight * (splitSubText.size() - 1);
 			setlinecolor(BLACK);
@@ -424,7 +424,7 @@ namespace Interface
 		if (form.mouseDown)
 		{
 			int curLine = (y - textTop) / lineHeight; /// 根据位置直接计算当前行行号（从0开始计，可能越界）
-			vector<wstring> splitText = MyString::split(text, L'\n'); /// 按换行符分隔文字
+			vector<wstring> splitText = StringUtility::split(text, L'\n'); /// 按换行符分隔文字
 
 			/// 处理越界
 			if (curLine < 0) curLine = 0;
@@ -640,7 +640,7 @@ namespace Interface
 			break;
 		case VK_UP: /// Up arrow key
 		{
-			vector<wstring> splitText = MyString::split(text, L'\n'); /// 按换行符分隔文字
+			vector<wstring> splitText = StringUtility::split(text, L'\n'); /// 按换行符分隔文字
 			int l = 0;
 			for (int i = 0; i < int(splitText.size()); l += splitText[i++].size() + 1)
 			{
@@ -661,7 +661,7 @@ namespace Interface
 		}
 		case VK_DOWN: /// Down arrow key
 		{
-			vector<wstring> splitText = MyString::split(text, L'\n'); /// 按换行符分隔文字
+			vector<wstring> splitText = StringUtility::split(text, L'\n'); /// 按换行符分隔文字
 			int l = 0;
 			for (int i = 0; i < int(splitText.size()); l += splitText[i++].size() + 1)
 			{

@@ -6,14 +6,13 @@
 #include "TruthTable.h" /// 引用TruthTable（真值表）类的头文件
 #include "DisjunctiveNormal.h" /// 引用DisjunctiveNormal（析取范式）类的头文件
 #include "ConjunctiveNormal.h" /// 引用ConjunctiveNormal（合取范式）类的头文件
-#include "Matrix.h" /// 引用矩阵头文件
-#include "Interface.h" /// 引用界面头文件
+#include "../GUI/Interface.h" /// 引用界面头文件
 using namespace std;
 using namespace Interface;
 
 shared_ptr<Function> getFunction(wstring str); /// 前向声明，位于Function.cpp中的函数，功能是根据字符串表达式str生成命题公式对象
 
-namespace DMCalc
+namespace PropositionCalc
 {
 	shared_ptr<Form> form;
 	shared_ptr<Label> label1;
@@ -33,7 +32,7 @@ namespace DMCalc
 
 	void button1_Click()
 	{
-		using namespace DMCalc;
+		using namespace PropositionCalc;
 		try
 		{
 			shared_ptr<Function> F = getFunction(L"F = " + textBox1->text);
@@ -52,7 +51,7 @@ namespace DMCalc
 
 	void textBox1_Update()
 	{
-		using namespace DMCalc;
+		using namespace PropositionCalc;
 		/// 自动取代表达式中的替代符号
 		for (wchar_t& ch : textBox1->text)
 		{
@@ -67,9 +66,9 @@ namespace DMCalc
 	}
 }
 
-void DMCalculator()
+void PropositionCalculator()
 {
-	using namespace DMCalc;
+	using namespace PropositionCalc;
 	form = make_shared<Form>(1280, 680, L"命题公式计算器");
 	LOGFONT font;
 	font.lfWeight = FW_DONTCARE;

@@ -15,100 +15,100 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Function.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Variable.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Negation.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Conjunction.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Disjunction.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="TruthTable.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="VariableAsFunction.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="MyString.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Nand.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Nor.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="ConstantAsFunction.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DisjunctiveNormal.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Interface.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Matrix.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="Implication.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="DMCalculator.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Function.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="TruthTable.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Variable.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="MyString.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Nand.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Disjunction.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Negation.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Nor.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="ConjunctiveNormal.h">
-      <Filter>头文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Conjunction.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Interface.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Matrix.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="Implication.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="MatrixCalculator.cpp">
+    <ClCompile Include="GUI\Interface.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="Proposition\Conjunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Proposition\Disjunction.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Proposition\Function.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Proposition\Implication.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Proposition\Nand.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Proposition\Negation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Proposition\Nor.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Proposition\PropositionCalculator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Proposition\TruthTable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Proposition\Variable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix\Matrix.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix\MatrixCalculator.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities\StringUtility.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GUI\Interface.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\Conjunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\ConjunctiveNormal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\ConstantAsFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\Disjunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\DisjunctiveNormal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\Function.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\Implication.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\Nand.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\Negation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\Nor.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\TruthTable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\Variable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Proposition\VariableAsFunction.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix\Matrix.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities\StringUtility.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

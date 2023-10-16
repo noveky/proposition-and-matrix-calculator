@@ -2,9 +2,7 @@
 #include <iostream>
 #include <string>
 #include <memory>
-#include "Function.h" /// 引用Function（命题公式）类的头文件
-#include "Matrix.h" /// 引用矩阵头文件
-#include "Interface.h" /// 引用界面头文件
+#include "GUI/Interface.h"
 using namespace std;
 using namespace Interface;
 
@@ -27,7 +25,7 @@ namespace Main
 	shared_ptr<TextBox> textBox7;
 }
 
-void DMCalculator();
+void PropositionCalculator();
 void MatrixCalculator();
 int main()
 {
@@ -51,7 +49,7 @@ int main()
 	LOGFONT font1 = font;
 	_tcscpy_s(font1.lfFaceName, _T("微软雅黑"));
 
-	Button button1(*form, 20, 20, 180, 36, &font1, L"命题公式计算器", nullptr, DMCalculator);
+	Button button1(*form, 20, 20, 180, 36, &font1, L"命题公式计算器", nullptr, PropositionCalculator);
 	Button button2(*form, 20, 20 + 36 + 16, 180, 36, &font1, L"有理矩阵计算器", nullptr, MatrixCalculator);
 	form->Main();
 

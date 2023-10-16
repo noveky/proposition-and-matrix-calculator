@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-namespace MyString
+namespace StringUtility
 {
 	//void trim(string& str);
 

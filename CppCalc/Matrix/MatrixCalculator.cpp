@@ -3,8 +3,8 @@
 #include <string>
 #include <memory>
 #include "Matrix.h" /// 引用矩阵头文件
-#include "Interface.h" /// 引用界面头文件
-#include "MyString.h"
+#include "../GUI/Interface.h" /// 引用界面头文件
+#include "../Utilities/StringUtility.h"
 using namespace std;
 using namespace Interface;
 
@@ -44,7 +44,7 @@ namespace MatrixCalc
 
 	int read(wstring str)
 	{
-		MyString::trim(str);
+		StringUtility::trim(str);
 		if (str.length() == 0) return 0;
 		int i = 0;
 		int x = 0, f = 1;
